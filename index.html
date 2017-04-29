@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Timeline</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Timeline">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <link rel="icon" type="image/png" href="https://cdn.knightlab.com/libs/purpleline/latest/img/favicon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- Style-->
+    <!-- 1 -->
+    <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+    
+    <style>
+      html, body {
+      height:100%;
+      padding: 0px;
+      margin: 0px;
+      }
+    </style>
+
+    <!-- 2 -->
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+    <script type="text/javascript">
+      var timeline_json = {
+        title   : {
+          media   : {
+            url     : "//www.flickr.com/photos/tm_10001/2310475988/",
+            caption : "Whitney Houston performing on her My Love is Your Love Tour in Hamburg.",
+            credit  : "flickr/<a href='http://www.flickr.com/photos/tm_10001/'>tm_10001</a>"
+          },
+          text  : {
+            headline: "Whitney Houston<br/> 1963 - 2012",
+            text: "<p>Houston's voice caught the imagination of the world propelling her to superstardom at an early age becoming one of the most awarded performers of our time. This is a look into the amazing heights she achieved and her personal struggles with substance abuse and a tumultuous marriage.</p>"
+          }
+        },
+        events    : [
+          { /** Event */
+            media   : {
+              url     : "/static/img/examples/houston/family.jpg",
+              caption : "Houston's mother and Gospel singer, Cissy Houston (left) and cousin Dionne Warwick.",
+              credit  : "Cissy Houston photo:<a href='http://www.flickr.com/photos/11447043@N00/418180903/'>Tom Marcello</a><br/><a href='http://commons.wikimedia.org/wiki/File%3ADionne_Warwick_television_special_1969.JPG'>Dionne Warwick: CBS Television via Wikimedia Commons</a>"
+            },
+            start_date: { year: "1963" },
+            text    : {
+              headline: "A Musical Heritage",
+              text    : "<p>Born in New Jersey on August 9th, 1963, Houston grew up surrounded by the music business. Her mother is gospel singer Cissy Houston and her cousins are Dee Dee and Dionne Warwick.</p>"
+            }
+          } /* end */
+
+        ] 
+      };
+      var additionalOptions = {
+        start_at_end: true,
+        default_bg_color: {r:0, g:0, b:0},
+        timenav_height: 250
+      };
+
+
+      $(document).ready(function(){
+          var embed = document.getElementById('timeline-embed');
+          embed.style.height = getComputedStyle(document.body).height;
+          window.timeline = new TL.Timeline('timeline-embed', timeline_json, additionalOptions);
+      //    window.timeline = new TL.Timeline('timeline-embed', 'timeline3.json', { hash_bookmark: false});
+          window.addEventListener('resize', function() {
+            var embed = document.getElementById('timeline-embed');
+            embed.style.height = getComputedStyle(document.body).height;
+            timeline.updateDisplay();
+          })
+        });
+
+    </script>
+  </head>
+  <body>
+  hi therei
+    <div id="timeline-embed">
+    </div>
+  </body>
+</html>
