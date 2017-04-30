@@ -13,12 +13,27 @@
     <!-- Style-->
     <!-- 1 -->
     <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
-    
+
     <style>
+      /* From the example on timeline.js */
       html, body {
-      height:100%;
-      padding: 0px;
-      margin: 0px;
+        height:100%;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      /* Override so headings are visible */
+      .tl-timeline h1, .tl-timeline h2, .tl-timeline h3, .tl-timeline h4, .tl-timeline h5, .tl-timeline h6 {
+        color: #fff;
+      }
+
+      img.thumby {
+        height: 30px;
+        width : 30px;
+      }
+      strong {
+        font-size : 1.2em;
+        color     : magenta;
       }
     </style>
 
@@ -28,37 +43,195 @@
       var timeline_json = {
         title   : {
           media   : {
-            url     : "//www.flickr.com/photos/tm_10001/2310475988/",
-            caption : "Whitney Houston performing on her My Love is Your Love Tour in Hamburg.",
-            credit  : "flickr/<a href='http://www.flickr.com/photos/tm_10001/'>tm_10001</a>"
+            url     : "images/intro.JPG",
+            caption : "K4T Units 11 and 12",
+            credit  : null
           },
           text  : {
-            headline: "Whitney Houston<br/> 1963 - 2012",
-            text: "<p>Houston's voice caught the imagination of the world propelling her to superstardom at an early age becoming one of the most awarded performers of our time. This is a look into the amazing heights she achieved and her personal struggles with substance abuse and a tumultuous marriage.</p>"
+            headline: "Timeline of <i>God's Plan for the Future</i>",
+            text: "<p>We saw how God \"provided all\" for Israel through Esther. What are the <strong>rest of God's plans</strong> for Israel? And us?</p>"
           }
         },
         events    : [
-          { /** Event */
-            media   : {
-              url     : "/static/img/examples/houston/family.jpg",
-              caption : "Houston's mother and Gospel singer, Cissy Houston (left) and cousin Dionne Warwick.",
-              credit  : "Cissy Houston photo:<a href='http://www.flickr.com/photos/11447043@N00/418180903/'>Tom Marcello</a><br/><a href='http://commons.wikimedia.org/wiki/File%3ADionne_Warwick_television_special_1969.JPG'>Dionne Warwick: CBS Television via Wikimedia Commons</a>"
+          { /** Event Creation */
+            media   : { // the big pic container
+              url     : "images/creation.jpg",  // big pic
+              thumbnail: "images/creation.jpg",
+              caption : "God creates the <strong>perfect</strong> world",// big pic caption
+              credit  : null
             },
-            start_date: { year: "1963" },
+            start_date: { year: "-5000" },
+            //end_date  : { year: "-4000"},
             text    : {
-              headline: "A Musical Heritage",
-              text    : "<p>Born in New Jersey on August 9th, 1963, Houston grew up surrounded by the music business. Her mother is gospel singer Cissy Houston and her cousins are Dee Dee and Dionne Warwick.</p>"
+              headline: "God creates the world", // the flag and headline text
+              text    : "<p>God creates man, who quickly sins. Righteous people lived - Seth, Enoch - but <strong>evil</strong> begins to abound (Gen 6:5 \"Evil thoughts continually\")</p>"      //
             }
-          } /* end */
+          }, /* end Event*/
+          { /** Event Flood */
+            media   : {
+              url     : "images/flood.jpg",
+              thumbnail: "images/flood.jpg",
+              caption : "Noah and family saved (8 people total)",
+              credit  : null
+            },
+            start_date: { year: "-2500" },
+            text    : {
+              headline: "God's judgement on sin is <strong>severe</strong>",
+              text    : "<p>At least a 1,500 years after the fall, God <strong>finally</strong> judges sin</p>"
+            }
+          }, /* end Event*/
+          { /** Event Abraham */
+            media   : {
+              url     : "images/abraham_covenant.jpg",
+              thumbnail: "images/abraham_covenant.jpg",
+              caption : "God promises Abraham as many children as there are stars",
+              credit  : null
+            },
+            start_date: { year: "-1900" },
+            text    : {
+              headline: "God's promise to Abraham",
+              text    : "<p>God made a covenant with Abraham. God would give <strong>land</strong>, <strong>descendants</strong> (uncountable like the stars), and <strong>blessing</strong> (Genesis 12, 15)</p>"
+            }
+          }, /* end Event*/
+          { /** Event Exodus*/
+            media   : {
+              url     : "images/exodus.jpg",
+              thumbnail: "images/exodus.jpg",
+              caption : "God's people cross the Red Sea on a dry pathway",
+              credit  : null
+            },
+            start_date: { year: "-1440" },
+            text    : {
+              headline: "God leads His people out of Egypt, into a covenant",
+              text    : "<p>God's people were oppressed and enslaved to the Egyptians. God <strong>freed</strong> and <strong>enriched</strong> them. God makes a covenant with them, and gives the 10 Commandments.</p> <p>Next, Joshua leads them (thoough they <strong>rebel</strong> along the way) into the Promised Land - a land flowing with milk and honey. </p>"
+            }
+          }, /* end Event*/
+          { /** Event Ruth */
+            media   : {
+              url     : "images/ruth-boaz.jpg",
+              thumbnail: "images/ruth-boaz.jpg",
+              caption : "Boaz sees Ruth gleaning in his field",
+              credit  : null
+            },
+            start_date: { year: "-1300" },
+            text    : {
+              headline: "Boaz and Ruth",
+              text    : "<p>The Moabite woman Ruth is the family tree of the Messiah</p>"
+            }
+          }, /* end Event*/
+          { /** Event David */
+            media   : {
+              url     : "images/david.jpg",
+              thumbnail: "images/david.jpg",
+              caption : "God rescues His people with a boy and a sling",
+              credit  : null
+            },
+            start_date: { year: "-1050" },
+            text    : {
+              headline: "King David, Solomon, and kings of Israel and Judah",
+              text    : "<p>David and Solomon were good but imperfect kings, and <strong>God blessed</strong> Israel abundantly.</p> <p>As time went on, however, the kings became more and more <strong>evil</strong> (Jeroboam, Ahab, Manasseh), and God gave lots of prophetic warning (Elijah, Elisha, Isaiah, Jeremiah)</p>"
+            }
+          }, /* end Event*/
+          { /** Event Nebuchadnezzar*/
+            media   : {
+              url     : "images/nebuchadnezzar.jpg",
+              thumbnail: "images/nebuchadnezzar.jpg",
+              caption : "Daniel interprets Nebuchadnezzar's dream (Daniel 2)",
+              credit  : null
+            },
+            start_date: { year: "-586" },
+            text    : {
+              headline: "Nebuchadnezzar destroys Jerusalem",
+              text    : "<p>Finally, after about <strong>500 years mercy</strong>, God sends Nebuchadnezzar to punish Israel. Nebuchadnezzar keeps God's people captive for 70 years.</p><p>Many of the people stay in Persia longer than 70 years.</p>"
+            }
+          }, /* end Event*/
+          { /** Event Esther*/
+            media   : {
+              url     : "images/esther.jpg",
+              thumbnail: "images/esther.jpg",
+              caption : "And Esther said, \"The adversary and enemy is this wicked Haman.\" (Esther 7:6)",
+              credit  : null
+            },
+            start_date: { year: "-400" },
+            text    : {
+              headline: "Esther and Mordecai",
+              text    : "<p>God works everything out to rescue the Jews from Haman's evil plan</p>"
+            }
+          }, /* end Event*/
+          { /** Event Cross*/
+            media   : {
+              url     : "images/cross.jpg",
+              thumbnail: "images/cross.jpg",
+              caption : "Jesus dies on the cross",
+              credit  : null
+            },
+            start_date: { year: "30" },
+            text    : {
+              headline: "The Lamb of God - sacrificed for sin",
+              text    : "<p>Jesus fulfills the righteous requirements of the law, and dies to pay for sin. No more sacrifice is needed.</p>"
+            }
+          }, /* end Event*/
+          { /** Event Jerusalem*/
+            media   : {
+              url     : "images/jerusalem-destroyed.jpg",
+              thumbnail: "images/jerusalem-destroyed.jpg",
+              caption : "Titus and the Romans destroy Jerusalem",
+              credit  : null
+            },
+            start_date: { year: "70" },
+            text    : {
+              headline: "Jerusalem destroyed",
+              text    : "<p>And Jesus said unto them, \"See ye not all these things? verily I say unto you, There shall not be left here one stone upon another, that shall not be thrown down.\" (Matt 24)</p>"
+            }
+          }, /* end Event*/
 
-        ] 
+          { /** Event 2nd Coming*/
+            media   : {
+              url     : "images/xx.jpg",
+              thumbnail: "images/xx.jpg",
+              caption : "caption",
+              credit  : null
+            },
+            start_date: { year: "2500" }, // random guess
+            text    : {
+              headline: "2nd Coming of Christ",
+              text    : "<p>Finally, Christ returns for His people, and begins the events the <i>The Day of the LORD</i>:</p>" +
+                        "<ul> <li>Christ's return </li>" +
+                        "     <li>Rapture - \"snatch away\" of God's people </li>" +
+                        "     <li>Tribulation - 7 years of <strong>terrible</strong> judgment</li> </ul>"
+            }
+          }, /* end Event*/
+
+
+          { /** Event XXX*/
+            media   : {
+              url     : "images/xx.jpg",
+              thumbnail: "images/xx.jpg",
+              caption : "caption",
+              credit  : null
+            },
+            start_date: { year: "2000" },
+            text    : {
+              headline: "headline",
+              text    : "<p>text about it</p>"
+            }
+          }, /* end Event*/
+
+
+        ]
       };
       var additionalOptions = {
-        start_at_end: true,
-        default_bg_color: {r:0, g:0, b:0},
-        timenav_height: 250
+        /* https://timeline.knightlab.com/docs/options.html */
+        //start_at_end              : false,
+         timenav_position         : 'top',
+        default_bg_color          : {r:0, g:0, b:0},
+        //initial_zoom              : 8,
+        scale_factor              : 1,
+        timenav_height_percentage: "33"
       };
 
+      TL.Language.languages.en.era_labels.positive_year.suffix = 'AD';
+      TL.Language.languages.en.era_labels.negative_year.suffix = 'BC';
 
       $(document).ready(function(){
           var embed = document.getElementById('timeline-embed');
@@ -75,7 +248,6 @@
     </script>
   </head>
   <body>
-  hi therei
     <div id="timeline-embed">
     </div>
   </body>
