@@ -7,12 +7,12 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <link rel="icon" type="image/png" href="https://cdn.knightlab.com/libs/purpleline/latest/img/favicon.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="files/font-awesome.min.css">
 
     <!-- Style-->
     <!-- 1 -->
-    <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+    <link title="timeline-styles" rel="stylesheet" href="files/timeline.css">
 
     <style>
       /* From the example on timeline.js */
@@ -24,7 +24,18 @@
 
       /* Override so headings are visible */
       .tl-timeline h1, .tl-timeline h2, .tl-timeline h3, .tl-timeline h4, .tl-timeline h5, .tl-timeline h6 {
-        color: #fff;
+        color: yellow;
+        font-size: 2.3em;
+        line-height: 110%;
+      }
+
+      .tl-timeline p {
+        font-size: 1.2em;
+      }
+
+      .tl-timeline .tl-caption {
+        font-size: 1.0em;
+        line-height: 105%;
       }
 
       img.thumby {
@@ -38,7 +49,7 @@
     </style>
 
     <!-- 2 -->
-    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+    <script src="files/timeline.js"></script>
     <script type="text/javascript">
       var timeline_json = {
         title   : {
@@ -63,7 +74,7 @@
             start_date: { year: "-5000" },
             //end_date  : { year: "-4000"},
             text    : {
-              headline: "God creates the world", // the flag and headline text
+              headline: "Creation: God creates the world", // the flag and headline text
               text    : "<p>God creates man, who quickly sins. Righteous people lived - Seth, Enoch - but <strong>evil</strong> begins to abound (Gen 6:5 \"Evil thoughts continually\")</p>"      //
             }
           }, /* end Event*/
@@ -76,7 +87,7 @@
             },
             start_date: { year: "-2500" },
             text    : {
-              headline: "God's judgement on sin is <strong>severe</strong>",
+              headline: "Flood: God's judgement on sin is <strong>severe</strong>",
               text    : "<p>At least a 1,500 years after the fall, God <strong>finally</strong> judges sin</p>"
             }
           }, /* end Event*/
@@ -89,7 +100,7 @@
             },
             start_date: { year: "-1900" },
             text    : {
-              headline: "God's promise to Abraham",
+              headline: "Covenant: God's promise to Abraham",
               text    : "<p>God made a covenant with Abraham. God would give <strong>land</strong>, <strong>descendants</strong> (uncountable like the stars), and <strong>blessing</strong> (Genesis 12, 15)</p>"
             }
           }, /* end Event*/
@@ -102,8 +113,8 @@
             },
             start_date: { year: "-1440" },
             text    : {
-              headline: "God leads His people out of Egypt, into a covenant",
-              text    : "<p>God's people were oppressed and enslaved to the Egyptians. God <strong>freed</strong> and <strong>enriched</strong> them. God makes a covenant with them, and gives the 10 Commandments.</p> <p>Next, Joshua leads them (thoough they <strong>rebel</strong> along the way) into the Promised Land - a land flowing with milk and honey. </p>"
+              headline: "Exodus: God leads His people out of Egypt, into a covenant",
+              text    : "<p>God's people were oppressed and enslaved to the Egyptians. God <strong>freed</strong> and <strong>enriched</strong> them. God makes a covenant with them, and gives the 10 Commandments.</p> <p>Next, Joshua leads them (though they <strong>rebel</strong> along the way) into the Promised Land - a land flowing with milk and honey. </p>"
             }
           }, /* end Event*/
           { /** Event Ruth */
@@ -128,7 +139,7 @@
             },
             start_date: { year: "-1050" },
             text    : {
-              headline: "King David, Solomon, and kings of Israel and Judah",
+              headline: "The Kings: King David, Solomon, and kings of Israel and Judah",
               text    : "<p>David and Solomon were good but imperfect kings, and <strong>God blessed</strong> Israel abundantly.</p> <p>As time went on, however, the kings became more and more <strong>evil</strong> (Jeroboam, Ahab, Manasseh), and God gave lots of prophetic warning (Elijah, Elisha, Isaiah, Jeremiah)</p>"
             }
           }, /* end Event*/
@@ -141,7 +152,7 @@
             },
             start_date: { year: "-586" },
             text    : {
-              headline: "Nebuchadnezzar destroys Jerusalem",
+              headline: "Captivity: Nebuchadnezzar destroys Jerusalem",
               text    : "<p>Finally, after about <strong>500 years mercy</strong>, God sends Nebuchadnezzar to punish Israel. Nebuchadnezzar keeps God's people captive for 70 years.</p><p>Many of the people stay in Persia longer than 70 years.</p>"
             }
           }, /* end Event*/
@@ -155,7 +166,7 @@
             start_date: { year: "-400" },
             text    : {
               headline: "Esther and Mordecai",
-              text    : "<p>God works everything out to rescue the Jews from Haman's evil plan</p>"
+              text    : "<p>God <strong>works everything out</strong> to rescue the Jews from Haman's evil plan</p>"
             }
           }, /* end Event*/
           { /** Event Cross*/
@@ -168,7 +179,7 @@
             start_date: { year: "30" },
             text    : {
               headline: "The Lamb of God - sacrificed for sin",
-              text    : "<p>Jesus fulfills the righteous requirements of the law, and dies to pay for sin. No more sacrifice is needed.</p>"
+              text    : "<p>Jesus fulfills the righteous requirements of the law, and <strong>dies</strong> to pay for sin. No more sacrifice is needed.</p>"
             }
           }, /* end Event*/
           { /** Event Jerusalem*/
@@ -181,29 +192,146 @@
             start_date: { year: "70" },
             text    : {
               headline: "Jerusalem destroyed",
-              text    : "<p>And Jesus said unto them, \"See ye not all these things? verily I say unto you, There shall not be left here one stone upon another, that shall not be thrown down.\" (Matt 24)</p>"
+              text    : "<p>And Jesus said unto them, \"See ye not all these things? verily I say unto you, There shall not be left here one stone upon another, that shall not be <strong>thrown down</strong>.\" (Matt 24)</p>"
             }
           }, /* end Event*/
-
+          { /** Event The Present*/
+            media   : {
+              url     : "images/present.jpg",
+              thumbnail: "images/present.jpg",
+              caption : "K4T theme night in 2017",
+              credit  : null
+            },
+            start_date: { year: "2017" },
+            text    : {
+              headline: "The present: living in the <i>New Testament</i>",
+              text    : "<p>No more law; no more sacrifice. Jews and Gentiles <strong>living by the Spirit</strong>. The church age.</p>"
+            }
+          }, /* end Event*/
           { /** Event 2nd Coming*/
             media   : {
-              url     : "images/xx.jpg",
-              thumbnail: "images/xx.jpg",
-              caption : "caption",
+              url     : "images/jesus-second-coming.jpg",
+              thumbnail: "images/jesus-second-coming.jpg",
+              caption : " \"This same Jesus, which is taken up from you into heaven, shall so come in like manner as ye have seen him go into heaven.\" (Acts 1:11)",
               credit  : null
             },
             start_date: { year: "2500" }, // random guess
             text    : {
               headline: "2nd Coming of Christ",
-              text    : "<p>Finally, Christ returns for His people, and begins the events the <i>The Day of the LORD</i>:</p>" +
-                        "<ul> <li>Christ's return </li>" +
-                        "     <li>Rapture - \"snatch away\" of God's people </li>" +
+              text    : "<p>Finally, Christ returns for His people, and <strong>begins the events</strong> the <strong><i>The Day of the LORD</i></strong>:</p>" +
+                        "<ul> <li>Christ's <strong>imminent</strong> return </li>" +
+                        "     <li>Rapture - God \"snatches away\" His people </li>" +
                         "     <li>Tribulation - 7 years of <strong>terrible</strong> judgment</li> </ul>"
             }
           }, /* end Event*/
 
+          { /** Event Millennium*/
+            media   : {
+              url     : "images/millennium.jpg",
+              thumbnail: "images/millennium.jpg",
+              caption : "The wolf also shall dwell with the lamb, ... and the calf and the young lion ... and a little child shall lead them. (Isa 11)",
+              credit  : null
+            },
+            start_date: { year: "2600" },
+            end_date: { year: "3600" },
+            text    : {
+              headline: "Millennial Reign of Christ on earth",
+              text    : "<p><strong>1000 year</strong> reign of Christ (with believers). Satan bound. The curse on earth partially rolled back.</p><p>However, at the end of Christ's reign, Satan is freed, and there is a <strong>final rebellion</strong>. (Rev 20:1-5)</p>"
+            }
+          }, /* end Event*/
 
-          { /** Event XXX*/
+
+
+        { /** Event Final Reward / Judgment*/
+            media   : {
+              url     : "images/awards.jpg",
+              thumbnail: "images/awards.jpg",
+              caption : "K4T Awards Ceremony",
+              credit  : null
+            },
+            start_date: { year: "3700" },
+            text    : {
+              headline: "Final Reward / Judgment",
+              text    : "<p>Satan, his angels, and those who hate the Lord will go to <strong>eternal punishment</strong> in hell.</p> <p>Christians will receive <strong>rewards</strong> for their right thoughts and actions.</p>"
+            }
+          }, /* end Event*/
+
+          { /** Event Eternal State*/
+            media   : {
+              url     : "images/creation.jpg",
+              thumbnail: "images/creation.jpg",
+              caption : "\"And I saw a <strong>new heaven</strong> and a <strong>new earth</strong>: for the first heaven and the first earth were passed away (Rev 21) \"",
+              credit  : null
+            },
+            start_date: { year: "3800" },
+            text    : {
+              headline: "Eternity with God",
+              text    : "<p>Reign over all creation with Christ ... fulfill the dominion mandate ... worship the Lord</p><p><strong>\"God himself shall be with them, and be their God\"</strong> (Rev 21)"
+            }
+          }, /* end Event*/
+
+
+
+
+          { /** Event Pyramids*/
+            media   : {
+              url     : "images/pyramids.jpg",
+              thumbnail: "images/pyramids.jpg",
+              caption : "Pyramids built",
+              credit  : null
+            },
+            start_date: { year: "-2000" },
+            text    : {
+              headline: "Pyramids Built",
+              text    : "<p>Exact date or builders unknown. But must have been built after the flood</p>"
+            }
+          }, /* end Event*/
+
+
+          { /** Event First Olympics*/
+            media   : {
+              url     : "images/1st_olympics.jpg",
+              thumbnail: "images/1st_olympics.jpg",
+              caption : "Coins inscribed with events from the ancient olympics",
+              credit  : null
+            },
+            start_date: { year: "-776" },
+            text    : {
+              headline: "1st Olympic Games",
+              text    : "<p>Started with short springs. Later added wrestling, throwing, and chariot races</p>"
+            }
+          }, /* end Event*/
+
+          { /** Event columbus*/
+            media   : {
+              url     : "images/columbus.jpg",
+              thumbnail: "images/columbus.jpg",
+              caption : "Replicas of his ships - Nina, Pinta, Santa Maria",
+              credit  : null
+            },
+            start_date: { year: "1492" },
+            text    : {
+              headline: "Christopher Columbus lands in America",
+              text    : "<p></p>"
+            }
+          }, /* end Event*/
+
+          { /** Event 1947*/
+            media   : {
+              url     : "images/israel.jpg",
+              thumbnail: "images/israel.jpg",
+              caption : "How much land Israel owned at different times in history",
+              credit  : null
+            },
+            start_date: { year: "1947" },
+            text    : {
+              headline: "Israel becomes a country again",
+              text    : "<p>After almost 1,900 years in exile with no country, the Jewish people once again have their own land.</p>"
+            }
+          }, /* end Event*/
+
+/*
+          { / ** Event XXX * /
             media   : {
               url     : "images/xx.jpg",
               thumbnail: "images/xx.jpg",
@@ -215,14 +343,14 @@
               headline: "headline",
               text    : "<p>text about it</p>"
             }
-          }, /* end Event*/
+          }, / * end Event*/
 
 
         ]
       };
       var additionalOptions = {
         /* https://timeline.knightlab.com/docs/options.html */
-        //start_at_end              : false,
+        start_at_end              : false,
          timenav_position         : 'top',
         default_bg_color          : {r:0, g:0, b:0},
         //initial_zoom              : 8,
